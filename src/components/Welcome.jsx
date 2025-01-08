@@ -10,7 +10,7 @@ function Welcome() {
         variant='dark'
         onClose={() => setShow(false)}
         dismissible
-        className='text-center'
+        className='text-center px-0 py-4 mb-0'
       >
         <hr />
         <Alert.Heading className='fs-1 fw-bolder text-black'>
