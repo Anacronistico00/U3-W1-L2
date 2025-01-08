@@ -15,12 +15,12 @@ class AllTheBooks extends Component {
       >
         {Books.map((book, i) => {
           return (
-            <Card style={{ width: '15rem' }} key={i} className='mx-2 mb-2'>
+            <Card style={{ width: '16rem' }} key={i} className='mx-2 mb-2'>
               <Card.Img
                 variant='top'
                 src={book.img}
                 style={{ height: '400px' }}
-                className=' object-fit-cover'
+                className='w-100 object-fit-cover'
               />
               <Card.Body className='d-flex flex-column justify-content-between'>
                 <Card.Title className='fw-bold'>{book.title}</Card.Title>
