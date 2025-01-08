@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import { Card, Container, ListGroup } from 'react-bootstrap';
-import fantasyBooks from '../data/fantasy.json';
+import Books from '../data/horror.json';
 
 class AllTheBooks extends Component {
   state = {
-    activeBook: fantasyBooks[0],
+    activeBook: Books[0],
   };
 
   render() {
@@ -13,10 +13,14 @@ class AllTheBooks extends Component {
         fluid={true}
         className='d-flex flex-wrap justify-content-center mt-5'
       >
-        {fantasyBooks.map((book, i) => {
+        {Books.map((book, i) => {
           return (
             <Card style={{ width: '15rem' }} key={i} className='mx-2 mb-2'>
-              <Card.Img variant='top' src={book.img} className='h-100' />
+              <Card.Img
+                variant='top'
+                src={book.img}
+                style={{ height: '350px' }}
+              />
               <Card.Body>
                 <Card.Title>{book.title}</Card.Title>
                 <Card.Text>${book.price}</Card.Text>
