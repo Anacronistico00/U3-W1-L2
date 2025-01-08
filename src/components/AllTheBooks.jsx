@@ -19,7 +19,8 @@ class AllTheBooks extends Component {
               <Card.Img
                 variant='top'
                 src={book.img}
-                style={{ height: '350px' }}
+                style={{ height: '400px' }}
+                className=' object-fit-cover'
               />
               <Card.Body className='d-flex flex-column justify-content-between'>
                 <Card.Title className='fw-bold'>{book.title}</Card.Title>
