@@ -1,12 +1,27 @@
-import { Alert } from 'react-bootstrap';
+import { Alert, Button } from 'react-bootstrap';
+import { useState } from 'react';
 
 function Welcome() {
-  return (
-    <Alert variant='dark' className='m-0 p-0'>
-      <Alert.Heading className='mt-1'>Welcome to My Library</Alert.Heading>
-      <p className='mb-0'>This is a list of my favorites books!</p>
-    </Alert>
-  );
+  const [show, setShow] = useState(true);
+
+  if (show) {
+    return (
+      <Alert
+        variant='dark'
+        onClose={() => setShow(false)}
+        dismissible
+        className='text-center'
+      >
+        <hr />
+        <Alert.Heading className='fs-1 fw-bolder text-black'>
+          Welcome To My Library!
+        </Alert.Heading>
+        <p>Feel free to search and inform about any book in this list</p>
+        <hr />
+      </Alert>
+    );
+  }
+  return <Button onClick={() => setShow(true)}>Show Alert</Button>;
 }
 
 export default Welcome;

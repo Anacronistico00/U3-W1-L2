@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Card, Container, ListGroup } from 'react-bootstrap';
-import Books from '../data/horror.json';
+import Books from '../data/fantasy.json';
 
 class AllTheBooks extends Component {
   state = {
