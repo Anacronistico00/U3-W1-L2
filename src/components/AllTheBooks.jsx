@@ -21,12 +21,17 @@ class AllTheBooks extends Component {
                 src={book.img}
                 style={{ height: '350px' }}
               />
-              <Card.Body>
-                <Card.Title>{book.title}</Card.Title>
-                <Card.Text>${book.price}</Card.Text>
+              <Card.Body className='d-flex flex-column justify-content-between'>
+                <Card.Title className='fw-bold'>{book.title}</Card.Title>
+                <Card.Text className='ms-auto'>${book.price}</Card.Text>
               </Card.Body>
-              <ListGroup className='list-group-flush'>
-                <ListGroup.Item>category: {book.category}</ListGroup.Item>
+              <ListGroup className='list-group-flush text-center'>
+                <ListGroup.Item className='fs-5 fw-bold'>
+                  {book.category}
+                </ListGroup.Item>
+                <ListGroup.Item className='fs-6'>
+                  ASIN: {book.asin}
+                </ListGroup.Item>
               </ListGroup>
             </Card>
           );
